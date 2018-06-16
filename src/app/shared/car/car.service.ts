@@ -3,9 +3,9 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
 
 @Injectable()
-export class CarService {
-  
-  public API = 'https://cm-sbhb.herokuapp.com';
+export class CarService {  
+   public API = 'https://cm-sbhb.herokuapp.com'; 
+ /* public API = 'http://localhost:8080';*/
   public CAR_API = this.API + '/cars';
   constructor(private http: HttpClient) {
   }

@@ -1,5 +1,5 @@
 
-/*import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
@@ -56,31 +56,3 @@ const appRoutes: Routes = [
   bootstrap: [AppComponent]
 })
 export class AppModule { }
-
-*/
-
-import { CarService } from './shared/car/car.service';
-
-import { HttpClientModule } from '@angular/common/http';
-
-@NgModule({
-
-declarations: [
-
-AppComponent
-
-],
-
-imports: [
-
-BrowserModule,
-
-HttpClientModule
-
-],
-
-providers: [CarService],
-
-bootstrap: [AppComponent]
-
-})
