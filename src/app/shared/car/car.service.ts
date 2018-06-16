@@ -2,20 +2,23 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
 
-@Injectable()
-export class CarService {  
-   public API = 'https://cm-sbhb.herokuapp.com'; 
- /* public API = 'http://localhost:8080';*/
+@Injectable({
+  providedIn: 'root'
+})
+export class CarService {
+
+  public API = 'https://cm-sbhb.herokuapp.com/';
   public CAR_API = this.API + '/cars';
-  constructor(private http: HttpClient) {
-  }
+  public COOL_CARS_API = this.API + '/cool-cars';
+
+  constructor(private http:HttpClient) { }
 
   getAll(): Observable<any> {
-    return this.http.get(this.API + '/cool-cars');
+    return this.http.get(this.COOL_CARS_API);
   }
 
-  get(id: string) {
-    return this.http.get(this.CAR_API + '/' + id);
+  get(id : string) {
+    return this.http.get(this.CAR_API + "/" + id)
   }
 
   save(car: any): Observable<any> {
